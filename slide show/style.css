@@ -1,0 +1,198 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+.background{
+	transition: all 0.5s;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+}
+
+.picture{
+	cursor: grab;
+	-webkit-user-drag: none;
+	transition: height 0.2s;
+	width: 100vw;
+	height: 100vh;
+	background: url(./pictures/img-1.jpg) center/contain no-repeat;
+	position: fixed;
+}
+
+.items{
+	transition: all 1.5s;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+	bottom: 1.3rem;
+	border-radius: 2rem;
+}	
+
+.item{
+	user-select: none;
+}
+
+.item:hover{
+	background-color: rgba(255,255,255,0.3);
+}
+
+.left, .right, .zoom-out, .zoom-in{
+	border-radius: 50%;
+	transition: all 0.5s;
+	width: 1.5rem;
+	fill: white;
+	padding: 5px 7px;
+	margin: 0 2px;
+	cursor: pointer;
+}
+
+.menu-icon{
+	z-index: 2;
+	transition: background-color 0.6s;
+	position: fixed;
+	cursor: pointer;
+	padding: 0 0.4rem 0.2rem 0.1rem;
+	margin-top: 0.5rem;
+	border-radius: 10px;
+	left: 1rem;
+	top: 0.6rem;
+	fill: white;
+	width: 2rem;
+	background: none;
+}
+
+.background menu{
+	overflow: hidden;
+	position: fixed;
+	left: -25rem;
+	transition: all 0.7s;
+	height: 100vh;
+	width: 22rem;
+	background-color: rgba(50,50,50,0.7);
+	box-shadow: 0 0 1.5rem 10px rgba(50,50,50,0.7);
+	backdrop-filter: blur(15px);
+}
+
+h1{
+	user-select: none;
+	font-family: cursive;
+	margin: 4.7rem 0 0 1.3rem;
+	color: cadetblue;
+	letter-spacing: 0.2rem; 
+}
+
+.line{
+	width: calc(100% - 2.6rem);
+	height: 1.3px;
+	margin: 1rem auto 1rem;
+	background-color: rgb(164, 175, 178);
+}
+
+.picture-svg{
+	fill: cadetblue;
+	width: 1.5rem;
+	margin-right: 0.5rem;
+}
+
+.back{
+	cursor: pointer;
+	width: 1.5rem;
+	position: relative;
+	right: 5rem; 
+	fill: white;
+	transition: all 0.3s;
+	margin: 0 0 0 2.3rem;
+}
+
+.back:hover{
+	width: 1.7rem;
+}
+
+.page-2, .page-1{
+	transition: all 0.5s;
+	position: absolute;
+}
+
+.page-2 .title{
+	user-select: none;
+	font-family: cursive;
+	color: cadetblue;
+	margin: 0 0 0.5rem 2.3rem;
+	font-size: 1.2rem;
+}
+
+.page-2 ol li {
+	display: flex;
+	align-items: center;
+	color: rgb(164, 175, 178);
+	list-style: none;
+	padding: 0.4rem 0.8rem 0.4rem 3.3rem;
+	border-bottom-right-radius: 2rem;
+	border-top-right-radius: 2rem;
+	cursor: default;
+	transition: all 0.3s;
+	user-select: none;
+}
+
+.page-2 ol li:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+.picture-list, .them{
+	user-select: none;
+	transition: all 0.3s;
+	font-family: cursive;
+	padding: 0.2rem 1rem 0.5rem 2.3rem;
+	border-bottom-right-radius: 2rem;
+	border-top-right-radius: 2rem;
+	cursor: default;
+	display: inline-block;
+	color: cadetblue;
+	font-size: 1.2rem;
+	width: 10.5rem;
+}
+
+.background-button{
+	border: 1px solid white;
+	background-color: rgba(50,50,50,0.7);
+	width: 2.3rem;
+	display: inline-block;
+	position: relative;
+	top: 0.3rem;
+	left: 0.8rem;
+	border-radius: 1rem;
+	margin-left: 1rem;
+	height: 1.3rem;
+}
+
+.button-pointer{
+	transition: all 0.3s;
+	height: 1rem;
+	width: 1rem;
+	position: absolute;
+	top: 0.15rem;
+	left: 0.2rem;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.picture-list:hover, .them:hover{
+	background-color: rgba(255,255,255,0.2);
+}
+
+@keyframes item-animation{
+	0%{
+		background-color: rgba(255,255,255,0.3);
+	}
+	100%{
+		background-color: none;
+	}
+}

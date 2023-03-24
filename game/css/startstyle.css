@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(1, 0, 15);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 15vh;
+  font-size: 3rem;
+  color: aliceblue;
+  user-select: none;
+  cursor: default;
+  font-family: "quicksand", "Courier New", monospace;
+}
+
+#start-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vh;
+}
+
+.menu-item {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "quicksand", "Courier New", monospace;
+  list-style: none;
+  padding: 5px 1rem 5px 1rem;
+  border-radius: 2rem;
+  transition: all 0.3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: rgba(240, 255, 255, 0.202);
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+#ball-animation {
+  position: fixed;
+  bottom: 6rem;
+}
+
+#ground {
+  width: 8rem;
+  height: 4px;
+  background-color: aliceblue;
+  border-radius: 1rem;
+}
+
+#ball {
+  background: url("../picture/ball.png") center/cover no-repeat;
+  border-radius: 50%;
+  margin: auto;
+  width: 2rem;
+  animation: ball-animation 1s ease-in-out infinite;
+}
+
+span {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+  color: rgb(77, 80, 83);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes ball-animation {
+  0% {
+    height: 1.5rem;
+    margin-bottom: -0.1rem;
+  }
+
+  20% {
+    height: 2rem;
+  }
+
+  50% {
+    margin-bottom: 4rem;
+  }
+
+  80% {
+    height: 2rem;
+  }
+
+  100% {
+    height: 1.5rem;
+    margin-bottom: -0.1rem;
+  }
+}
+
+@media (max-height: 660px) {
+  #ball-animation {
+    display: none;
+  }
+}
