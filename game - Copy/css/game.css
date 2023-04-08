@@ -26,6 +26,9 @@ main {
 }
 
 #ground-setting{
+}
+
+#shooting-pannel{
   display: none;
 }
 
@@ -98,6 +101,10 @@ input {
   display: flex;
 }
 
+#wall-button-container{
+  display: block;
+}
+
 button {
   all: unset;
   transition: all 0.5s;
@@ -131,6 +138,16 @@ input::-webkit-inner-spin-button {
 
 .yellow-button:hover {
   background-color: rgb(255, 239, 94);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.444);
+}
+
+#creat-wall-button{
+  background-color: rgb(164, 148, 253);
+  margin-top: 10px;
+}
+
+#creat-wall-button:hover{
+  background-color: rgb(129, 107, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.444);
 }
 
