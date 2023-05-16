@@ -10,8 +10,7 @@ const speek_list = [
   "I'm a gravity simulator",
   "Someone named Hossein wrote me",
   "I have an advanced mechanism",
-  "But I also have bugs",
-  "I will be complete soon ; )",
+  "I will be completed soon ; )",
   "But overall, I hope you like me",
   "Bye : )",
 ];

@@ -146,6 +146,9 @@ class Ball {
 
     // this is used for calculating the return shoot power
     this.return_power = 100;
+
+    // this will call when the ball movement is ended
+    this.end_function = null;
   }
 
   setXY = (x, y) => {
@@ -241,7 +244,7 @@ class Ball {
           let new_power = distance * this.return_power * this.m;
           if (this.is_return_power_equal) new_power = power;
           if (data && new_power > 10 && distance > 1) return this.shoot(data[0], new_power, data[3]);
-          else return "ended";
+          else this.end_function();
         } else return "Error";
       } else {
         if (Math.abs(angle_range[0] - test_angle) > 180) this.shoot(handleAngle(angle_range[0] * 2 - test_angle + 360), power, angle_range);
@@ -249,7 +252,7 @@ class Ball {
         return "Error";
       }
     } else if (power < 30000) return "too much power";
-    else return "ended";
+    else this.end_function();
   };
 }
 
@@ -507,7 +510,7 @@ class Wall {
       else return false;
     };
 
-    this.wall_number = walls.length;
+    if (!this.begined) this.wall_number = walls.length;
 
     // here according to whether the wall is "inside" or "outside", it is called method1 or method2
     if (this.ball_handling === "outside") {
@@ -517,7 +520,7 @@ class Wall {
       if (!this.begined) walls.push(method2);
       else walls[this.wall_number] = method2;
     }
-    
+
     this.begined = true;
   };
 }
