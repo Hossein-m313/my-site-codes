@@ -1,22 +1,44 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "vazirmatn", "quicksand", "Courier New", monospace;
   text-align: right;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #525252d6;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #aba4bad6;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+body {
+  --page-padding: 5rem;
+  padding: 2rem var(--page-padding);
+  background-color: black;
+}
 main {
-  width: 100vw;
   max-width: 100%;
+  margin: 0 auto;
   display: flex;
-  background-color: rgb(1, 0, 15);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  max-width: 100rem;
 }
 
 #text-animation-container {
@@ -31,7 +53,6 @@ main {
   background-color: rgb(1, 0, 15);
   z-index: 10;
 }
-
 #text-box {
   display: flex;
   align-items: center;
@@ -43,25 +64,28 @@ main {
 #first-page {
   width: 100%;
   height: 100vh;
+  position: relative;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: 2rem;
   background: url("../picture/back-ground.jpg") no-repeat center/cover;
 }
-
 #first-page-back-ground {
   width: 100%;
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
+  text-align: center;
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 100%);
 }
-
-h1 {
+#first-page h2 {
   position: relative;
   animation: up-text 1s;
   color: aliceblue;
   font-weight: 500;
   font-size: calc(1vw + 3rem);
+  text-align: center;
 }
-
 #title-cap {
   color: aliceblue;
   position: relative;
@@ -70,9 +94,8 @@ h1 {
   font-size: 1.5rem;
   display: block;
   margin-top: 10px;
-  /* word-spacing: 20px; */
+  text-align: center;
 }
-
 #arrow-down {
   fill: aliceblue;
   margin-top: 30px;
@@ -87,24 +110,23 @@ h1 {
   background-color: black;
   color: aliceblue;
   box-sizing: border-box;
-  padding: 2rem;
-  line-height: 40px;
+  line-height: 50px;
   font-weight: 300;
-  font-size: 1.3rem;
+  overflow: hidden;
+  font-size: 1.6rem;
 }
-
 #information-box1 h2 {
   margin-bottom: 30px;
   font-size: 2.5rem;
   font-weight: 400;
 }
-#information-box1 .contents-container{
+#information-box1 .contents-container {
   display: flex;
 }
 #information-box1 .contents-container .vertical {
   margin: 0 20px;
   width: 0.5px;
-  height: 200px;
+  height: 250px;
   background-color: aliceblue;
 }
 #information-box1 img {
@@ -115,22 +137,30 @@ h1 {
 #information-box1 .horizontal {
   background-color: aliceblue;
   height: 0.5px;
-  width: calc(100vw - 774px);
+  width: 55.5rem;
   position: relative;
   left: 335px;
-  bottom: 31px;
+  bottom: 21px;
 }
-#information-box1 .curve{
+#information-box1 .curve {
   position: relative;
   left: 320px;
-  bottom: 30px;
-  border: solid 0.5px aliceblue;
+  bottom: 20px;
+  border: solid 2px aliceblue;
   border-radius: 50%;
   width: 30px;
   height: 30px;
 }
+#information-box1 p {
+  height: 180px;
+  overflow-y: scroll;
+  position: relative;
+  top: 20px;
+  direction: rtl;
+  padding-left: 1rem;
+}
 
-#information-box2{
+#information-box2 {
   height: 340px;
 }
 #information-box2 h2 {
@@ -138,18 +168,18 @@ h1 {
   font-size: 2.5rem;
   font-weight: 400;
   position: relative;
-  bottom: 20px;
+  bottom: 40px;
 }
-#information-box2 .contents-container{
+#information-box2 .contents-container {
   display: flex;
 }
 #information-box2 .contents-container .vertical {
   margin: 0 20px;
   width: 0.5px;
-  height: 310px;
+  height: 300px;
   background-color: aliceblue;
   position: relative;
-  bottom: 126px;
+  bottom: 130px;
 }
 #information-box2 img {
   width: 400px;
@@ -157,91 +187,390 @@ h1 {
   float: left;
   border-radius: 1rem;
   position: relative;
-  bottom: 20px;
+  bottom: 40px;
 }
 #information-box2 .horizontal {
   background-color: aliceblue;
   height: 0.5px;
-  width: 100vw;
+  width: 100%;
   position: relative;
-  right: 438px;
-  bottom: 142.5px;
+  right: 23.5rem;
+  bottom: 146px;
 }
-#information-box2 .curve1{
+#information-box2 .curve1 {
   position: relative;
-  left: calc(299px + 100vw - 753px);
-  bottom: 31px;
-  border: solid 0.5px aliceblue;
+  left: 75.55rem;
+  bottom: 22px;
+  border: solid 2px aliceblue;
   border-radius: 50%;
   width: 30px;
   height: 30px;
 }
-#information-box2 .curve2{
+#information-box2 .curve2 {
   position: relative;
-  left: calc(299px + 100vw - 753px);
-  bottom: 142px;
-  border: solid 0.5px aliceblue;
+  left: 75.55rem;
+  bottom: 145px;
+  border: solid 2px aliceblue;
   border-radius: 50%;
   width: 30px;
   height: 30px;
 }
-#information-box2 p{
-  height: 180px;
+#information-box2 p {
+  height: 210px;
   position: relative;
-  bottom: 20px;
+  bottom: 80px;
   overflow-y: scroll;
   padding-right: 1rem;
 }
 
-#information-boxes p{
-  height: 180px;
-  overflow-y: scroll;
+#contents {
+  background-color: black;
+  width: 100%;
+  color: aliceblue;
+  box-sizing: border-box;
+  margin-top: 4rem;
+}
+#contents h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#contents-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: scroll;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+#contents-container .container {
+  border-radius: 2rem;
+  width: 300px;
+  background-color: rgb(31, 35, 36);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: aliceblue;
+  text-decoration: none;
+}
+#contents-container .container:hover {
+  background-color: rgb(38, 66, 81);
+}
+#contents-container .container div {
+  border-radius: 1rem;
+  margin-bottom: 10px;
+}
+#contents-container span {
+  margin-top: 5px;
+  display: inline-block;
+}
+#contents-container .img {
+  height: 300px;
+  width: 300px;
+}
+#img1 {
+  background: url("../picture/a\ beauty\ picture\ of\ space.jpg") center/cover
+    no-repeat;
+}
+#img2 {
+  background: url("../picture/history\ of\ astronomy.jpg") center/cover
+    no-repeat;
+}
+#img3 {
+  background: url("../picture/some\ space\ things.jpg") center/cover no-repeat;
+}
+#img4 {
+  background: url("../picture/an\ amazing\ star.jpg") center/cover no-repeat;
+}
+#img5 {
+  background: url("../picture/a\ planet\ and\ a\ sun.jpg") center/cover
+    no-repeat;
+}
 
+#videos {
+  background-color: black;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4rem;
 }
-#information-boxes p::-webkit-scrollbar {
-  display: auto;
-  width: 10px;
-  background-color: transparent;
+#videos h3 {
+  font-size: 2.5rem;
+  color: aliceblue;
+  margin-bottom: 1rem;
 }
-#information-boxes p::-webkit-scrollbar-thumb {
-  background-color: #32009dd6;
-  border-radius: 20px;
-  border: 3px solid transparent;
-  background-clip: content-box;
+#videos .container {
+  display: flex;
+  gap: 2rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+  color: aliceblue;
+  overflow-x: scroll;
+  direction: rtl;
 }
-#information-boxes p::-webkit-scrollbar-thumb:active {
-  background-color: #3900b5d6;
+#videos .container div {
+  background-color: rgb(23, 25, 34);
+  border-radius: 2rem;
+  padding: 1rem;
+  width: fit-content;
+}
+#videos video {
+  height: 250px;
+  border-radius: 1rem;
+}
+#videos h4 {
+  margin: 0.5rem 1rem;
+  font-size: 1.5rem;
 }
 
-
-/* #ball-animation {
+#simulator {
+  width: 100%;
+  margin-top: 4rem;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+#simulator h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#simulator .container {
+  width: 100%;
+  height: 17rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 20px rgba(119, 119, 119, 0.434);
+}
+#simulator .planet-picture {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background: center/cover no-repeat url("../picture/solar\ system.jpg");
+  height: 100%;
+  width: 60vw;
+}
+#simulator .planet-picture div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, black, transparent);
+}
+#simulator .left-pannel {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: black;
+  width: 40vw;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: fixed;
-  bottom: 6rem;
+  justify-content: space-between;
 }
-
+#simulator .left-pannel h4 {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+#simulator .left-pannel .bottom-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#go-simulator {
+  transition: all 0.3s;
+  background-color: rgb(1, 182, 62);
+  width: 10rem;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 0.5rem;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+#go-simulator:hover {
+  background-color: rgb(0, 88, 29);
+}
+#ball-animation {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
 #ground {
   position: relative;
   width: 0px;
   height: 0px;
   background-color: aliceblue;
 }
-
 #ball {
   position: relative;
-  margin: auto;
   width: 32px;
 }
 
+#about-us {
+  color: aliceblue;
+  width: 100%;
+  margin-top: 4rem;
+  box-sizing: border-box;
+}
+#about-us .container {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(7, 7, 92) 34%,
+    rgb(0, 30, 36) 100%
+  );
+  padding: 2rem;
+  display: flex;
+  min-height: 340px;
+  border-radius: 2rem;
+}
+#about-us h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#about-us p {
+  line-height: 3rem;
+  font-size: 1.4rem;
+}
+#about-us .container div {
+  margin-right: 2rem;
+  background: center/cover no-repeat
+    url("../picture/a\ man\ on\ a\ camputer.webp");
+  width: calc(10vw + 45rem);
+  position: relative;
+  max-width: 28rem;
+  border-radius: 1.5rem;
+}
+
+#contact-us {
+  --height: 20rem;
+  background-color: black;
+  width: 100%;
+  box-sizing: border-box;
+  color: aliceblue;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  box-sizing: border-box;
+}
+#contact-us .container {
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url("../picture/skye\ with\ stars.webp") center/cover no-repeat
+    fixed;
+  border-radius: 2rem;
+}
+#contact-us .line {
+  height: var(--height);
+  width: 1px;
+  margin: 0 2rem;
+  background-color: aliceblue;
+}
+#contact-us .about-site {
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.479);
+  padding: 1rem;
+  width: 30vw;
+}
+#contact-us .about-site img {
+  width: 100px;
+}
+#contact-us .about-site p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#contact-us .about-site div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-us .about-site div span {
+  margin-right: 10px;
+}
+#contact-us svg {
+  width: 20px;
+  fill: white;
+}
+#contact-us .links {
+  background-color: rgba(0, 0, 0, 0.479);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+}
+#contact-us .links h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#contact-us .links a {
+  color: aliceblue;
+  text-decoration: none;
+  margin: 5px 0;
+}
+#contact-us form {
+  background-color: rgba(0, 0, 0, 0.479);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#contact-us form h4 {
+  text-align: center;
+}
+#contact-us form input,
+#contact-us form textarea {
+  all: unset;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  text-align: left;
+}
+#contact-us form input::placeholder {
+  text-align: right;
+}
+#contact-us form textarea {
+  margin-bottom: 10px;
+  text-align: right;
+  direction: rtl;
+}
+#contact-us form button {
+  all: unset;
+  background-color: rgb(5, 151, 93);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s;
+}
+#contact-us form button:hover {
+  background-color: rgb(3, 93, 57);
+}
 #caption {
   font-size: 0.9rem;
+  background-color: black;
+  width: 100%;
+  text-align: center;
   display: block;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
   color: rgb(77, 80, 83);
   font-family: Arial, Helvetica, sans-serif;
-} */
+}
 
 @keyframes up-text {
   0% {
@@ -295,23 +624,56 @@ h1 {
     visibility: visible;
   }
 }
-@media (max-width: 850px) {
-  h1 {
+@media (max-width: 1000px) {
+  h2 {
     font-size: 3rem;
     text-align: center;
     padding-top: calc(-5vw + 4rem);
   }
-
   #title-cap {
     margin-top: 4vw;
     text-align: center;
   }
-
   #first-page-back-ground div {
     text-align: center;
   }
-
   #first-page {
     height: 40rem;
+  }
+  #menu-bar {
+    display: flex;
+  }
+  .option {
+    display: none;
+  }
+}
+@media (max-width: 1500px) {
+  #option1 {
+    left: 5rem;
+    top: 5rem;
+  }
+  #option2 {
+    left: 28rem;
+    top: 25rem;
+  }
+  #option3 {
+    left: 20rem;
+    top: 13rem;
+  }
+  #option4 {
+    left: 40rem;
+    top: 18rem;
+  }
+  #option5 {
+    left: 7rem;
+    top: 23rem;
+  }
+  #option6 {
+    left: 45rem;
+    top: 28rem;
+  }
+  #option7 {
+    left: 60rem;
+    top: 20rem;
   }
 }

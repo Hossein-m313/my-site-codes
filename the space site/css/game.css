@@ -1,7 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "quicksand", Arial, "Courier New", monospace;
+  text-align: right;
+  font-weight: 700;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #525252d6;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #aba4bad6;
 }
 
 /***************************************************************************/
@@ -56,7 +72,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   align-items: center;
   position: relative;
   cursor: pointer;
@@ -65,8 +80,12 @@ h2 {
   border-radius: 1rem;
   border: 1px solid transparent;
   height: 20px;
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
   transition: all 1s;
+}
+
+.change-button-container span{
+  text-align: center;
 }
 
 .change-button-container-default-height {
@@ -75,7 +94,7 @@ h2 {
 
 .change-button-container:hover {
   border: 1px solid black;
-  height: 60px;
+  height: 70px;
 }
 
 .button-icon {
@@ -103,6 +122,7 @@ form {
 
 #shooting-pannel-inputs {
   height: calc(10rem + 40px);
+  position: relative;
 }
 
 #ground-setting-inputs {
@@ -111,6 +131,71 @@ form {
 
 /***************************************************************************/
 /* styles related to the inputs and the input containers */
+
+#planet-gravities{
+  position: absolute;
+  left: calc(50% - 1.7rem);
+  text-align: center;
+  top: 8px;
+}
+#planet-gravities .container{
+  height: 150px;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.429);
+  border-radius: 0.3rem;
+  border-top-left-radius: 2.3rem;
+  border-bottom-left-radius: 2.3rem;
+  overflow-y: scroll;
+  padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+  box-sizing: border-box;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  user-select: none;
+}
+#planet-gravities img{
+  width: 60px;
+  border-radius: 50%;
+}
+#planet-gravities .container div{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px white;
+  border-radius: 2rem;
+  padding: 5px;
+  transition: border 0.3s;
+  cursor: pointer;
+}
+#planet-gravities .container div:hover{
+  border: solid 1px rgb(104, 104, 104);
+}
+#planet-gravities span{
+  font-size: 17px;
+}
+#planet-gravities .gravity{
+  font-size: 13px;
+  font-weight: 100;
+}
+
+#planet-guide{
+  position: absolute;
+  width: 15rem;
+  right: calc(50% + 1rem);
+  top: 8.5rem;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.429);
+  padding: 5px 10px;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  z-index: 3;
+  border-right: 3px solid red;
+  animation: planet-giude-animation 4s forwards 0.5s;
+  opacity: 0;
+}
 
 .form-part {
   display: flex;
@@ -297,5 +382,20 @@ button:hover {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@keyframes planet-giude-animation {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }

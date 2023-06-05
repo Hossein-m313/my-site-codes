@@ -1,1 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: "vazirmatn";
+  src: local("vazirmatn thin");
+}
+* {
+  font-family: "vazirmatn", "quicksand", "Courier New", monospace;
+}

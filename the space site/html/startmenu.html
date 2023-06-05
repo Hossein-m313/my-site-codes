@@ -4,34 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gravity simulator</title>
+    <title>Rocket learn</title>
     <link rel="stylesheet" href="../css/startmenu.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="icon" href="../icon/ball.png" />
+    <link rel="stylesheet" href="../css/headerstyles.css" />
+    <link rel="icon" href="../icon/pngwing.com.png" />
   </head>
   <body>
+    <header>
+      <div class="icon">
+        <img id="rocket" src="../../icon/pngwing.com.png" alt="rocket learn" />
+        <h1>rocket learn</h1>
+      </div>
+      <ul class="bar-list">
+        <li><a href="./login.html">عضویت در خبرنامه</a></li>
+        <li><a href="#contact-us">ارتباط با ما</a></li>
+        <li><a href="#videos">ویدیو ها</a></li>
+        <li><a href="#contents">مطالب</a></li>
+        <li><a href="#about-us">درباره ما</a></li>
+        <li><a href="#simulator">شبیه ساز</a></li>
+      </ul>
+      <div id="menu">
+        <div class="hamburger-menu-line"></div>
+        <div class="hamburger-menu-line" id="menu-page">
+          <div class="menu-contents">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+            <img src="../icon/pngwing.com.png" alt="rocket learn" />
+            <h2>Rocket learn</h2>
+            <ul>
+              <li>
+                <a href="./login.html">عضویت در خبرنامه</a>
+                <div class="underline"></div>
+              </li>
+              <li>
+                <a href="#contact-us">ارتباط با ما</a>
+                <div class="underline"></div>
+              </li>
+              <li>
+                <a href="#videos">ویدیو ها</a>
+                <div class="underline"></div>
+              </li>
+              <li>
+                <a href="#contents">مطالب</a>
+                <div class="underline"></div>
+              </li>
+              <li>
+                <a href="#about-us">درباره ما</a>
+                <div class="underline"></div>
+              </li>
+              <li>
+                <a href="#simulator">شبیه ساز</a>
+                <div class="underline"></div>
+              </li>
+            </ul>
+          </div>
+          <video src="../videos/andromeda-dribbble_9.mp4" muted loop autoplay></video>
+          <div class="video-container"></div>
+        </div>
+        <div class="hamburger-menu-line"></div>
+      </div>
+    </header>
     <main>
       <section id="text-animation-container">
         <div id="text-box"></div>
       </section>
       <section id="first-page">
         <div id="first-page-back-ground">
-          <div>
-            <h1>در مورد نجوم چی میدونی؟</h1>
-            <span id="title-cap"> اطلاعات نجومیت رو افزایش بده</span>
-            <svg id="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path
-                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-              />
-            </svg>
-          </div>
+          <h2>در مورد فضا چی میدونی؟</h2>
+          <span id="title-cap"> اطلاعات نجومیت رو با راکت لرن افزایش بده</span>
+          <svg id="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+            />
+          </svg>
         </div>
       </section>
       <section id="information-boxes">
         <article id="information-box1">
           <h2>نجوم یعنی چیه ؟</h2>
           <div class="contents-container">
-            <img src="../picture/نجوم.jpg" alt="Astronomy" />
+            <img src="../picture/telescope.jpg" alt="Astronomy" />
             <div class="vertical"></div>
             <p>
               اَختَرشناسی، سِتاره‌شناسی، نُجوم یا آسترونومی به دانش بررسی موقعیت، تغییرات، حرکت و ویژگی‌های فیزیکی و شیمیایی «اشیای آسمانی» از جمله ستاره‌ها،
@@ -50,19 +104,151 @@
               وقايع آينده را پيش از زماني که اتفاق خواهد افتاد به اطلاع مردم ميرساند. درنتيجه موقع وقوع آن حوادث هيچکس دچار هول و هراس نميشود
             </p>
             <div class="vertical"></div>
-            <img src="../picture/نجوم2.jpg" alt="Astronomy" />
+            <img src="../picture/observatory.jpg" alt="Astronomy" />
           </div>
           <div class="curve2"></div>
           <div class="horizontal"></div>
         </article>
       </section>
-      <!-- <section id="ball-animation">
-        <img id="ball" src="../icon/ball.png" alt="ball" />
-        <div id="ground"></div>
-      </section> -->
-      <!-- <span id="caption">made by hossein mardani on 1401/3/6</span> -->
+      <section id="contents">
+        <h3>مطالب</h3>
+        <div id="contents-container">
+          <a href="./contents/astrology branches.html" class="container">
+            <div class="img" id="img1"></div>
+            <h4>شاخه های اختر شناسی</h4>
+            <span>در مورد شاخه های علم نجوم بیشتر بدون</span>
+          </a>
+          <a href="./contents/history of astronomy.html" class="container">
+            <div class="img" id="img2"></div>
+            <h4>تاریخچه علم نجوم</h4>
+            <span>میدونی چه کسی برای ولین بار علم نجوم رو مطرح رد؟</span>
+          </a>
+          <a href="./contents/astronomical instruments.html" class="container">
+            <div class="img" id="img3"></div>
+            <h4>ابزارالات نجوم</h4>
+            <span>میدنی تلسکوپ چجوری کار میکنه؟ اسطرلاب چطور؟</span>
+          </a>
+          <a href="./contents/the life of the sun.html" class="container">
+            <div class="img" id="img4"></div>
+            <h4>عمر خورشید</h4>
+            <span>شنیدی میگن خورشید یه روزی قراره بمیره؟</span>
+          </a>
+          <a href="./contents/habitable planet.html" class="container">
+            <div class="img" id="img5"></div>
+            <h4>سیاره قابل سکونت</h4>
+            <span>به نظرت میشه تو سیاره‌ای غیر از زمین زندگی کرد؟</span>
+          </a>
+        </div>
+      </section>
+      <section id="videos">
+        <h3>ویدیو ها</h3>
+        <div class="container">
+          <div>
+            <video src="../videos/97d117f14a0ddc80a099f8287b1d70e423064820-1080p.mp4" controls></video>
+            <h4>عظمت کیهان</h4>
+          </div>
+          <div>
+            <video src="../videos/aaf19ab86c204259752bee689d826c6621618671-720p.mp4" controls></video>
+            <h4>داستان جهان</h4>
+          </div>
+          <div>
+            <video src="../videos/0f377cabeb42d9292252ee9dfc16669523420440-480p.mp4" controls></video>
+            <h4>کهکشان راه شیری</h4>
+          </div>
+        </div>
+      </section>
+      <section id="simulator">
+        <h3>شبیه ساز</h3>
+        <div class="container">
+          <div class="left-pannel">
+            <h4>دوست داری جاذبه سیاره های مختلف رو شبیه سازی کنی؟ همین الان امتحان کن</h4>
+            <div class="bottom-container">
+              <div id="ball-animation">
+                <img id="ball" src="../icon/ball.png" alt="ball" />
+                <div id="ground"></div>
+              </div>
+              <a id="go-simulator" href="./game.html">امتحان کن</a>
+            </div>
+          </div>
+          <div class="planet-picture">
+            <div></div>
+          </div>
+        </div>
+      </section>
+      <section id="about-us">
+        <div>
+          <h3>درباره ما</h3>
+          <div class="container">
+            <div></div>
+            <p>
+              من یک برنامه نویس هستم که در حوضه های مختلف این رشته فعالیت دارم به سرم زد که از این دانشم استفاده کنم تا یک سایتی درست کنم که دانش خواننده هاشو
+              درباره‌ی علم نجوم افزایش بده نه اینکه الکی وقتشونو تلف کنه
+              <br />
+              برای همین نوشتن این سایتو شروع کردم تا بلاخره بعد از تلاش های زیاد تونستم اون چیزی که مد نظرم بود رو اجرایی کنم . منظورم از چیزی که مد نظرم بود یک
+              سایت جامع و کامل با مطالب مفید هست که در کنار این چیزا تونسته در خودش نوآوری هایی مثل شبیه سازی جاذبه های مختلف رو بگنجونه و در عین حال هر کسی
+              بتونه ازش استفاده کنه
+              <br />
+              به هر حال امیدوارم بتونید بهترین استفاده رو از این سایت ببرید
+              <br />
+              ; ) دوستار شما حسین مردانی
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer id="contact-us">
+      <div class="container">
+        <form>
+          <h4>نظرات / پیشنهادات</h4>
+          <input type="email" placeholder="ایمیل" />
+          <textarea id="massage" cols="30" rows="5" placeholder="پیام"></textarea>
+          <button type="submit">ارسال</button>
+        </form>
+        <div class="line"></div>
+        <div class="links">
+          <h4>دسترسی سریع</h4>
+          <a href="#information-boxes">معرفی</a>
+          <a href="#contents">مطالب</a>
+          <a href="#videos">ویدیو ها</a>
+          <a href="#simulator">شبیه ساز</a>
+          <a href="#about-us">درباره سازنده</a>
+          <a href="./login.html">عضویت در خبرنامه</a>
+        </div>
+        <div class="line"></div>
+        <div class="about-site">
+          <img src="../icon/pngwing.com.png" alt="rocket lean icon" />
+          <p>
+            راکت لرن یک پروژه دانش آموزی برای ارائه بهترین مطالب به هر قشری از جامعه هست که روز به روز دنبال بهتر شدن هست و امید داره روزی برسه که دیگه هیچ علمی
+            بر جهان پوشیده نباشه
+          </p>
+          <div>
+            <span>09036750555</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z" />
+            </svg>
+          </div>
+          <div>
+            <span>hosseinmardanikivi@gmail.com</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+              />
+            </svg>
+          </div>
+          <div>
+            <span>Hossein-m313</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span id="caption">made by hossein.m in 1401-1402</span>
+    </footer>
     <script type="module" src="../script/startmenu.js"></script>
     <script type="module" src="../script/document.js"></script>
+    <script type="module" src="../script/header.js"></script>
   </body>
 </html>

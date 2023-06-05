@@ -160,7 +160,7 @@ class Ball {
   shoot = async (angle, power, angle_range) => {
     // this function is used for shooting the ball
 
-    if (power < 30000 && this.shoot_overflow_handler < 2) {
+    if (this.shoot_overflow_handler < 2) {
       this.shoot_overflow_handler++;
       let frame = 1;
       // N = delta(v) * m / delta(t) ---> " delta(v) = delta(t) * N / m "

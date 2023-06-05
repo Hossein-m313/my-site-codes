@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "vazirmatn", "quicksand", "Courier New", monospace;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("../picture/space1.jpg");
+    background-position: center;
+    background-size: cover; 
+}
+
+.box{
+    width: 18rem;
+    height: 29rem;
+    padding: 1.2rem;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 1.5rem;
+}
+
+.back{
+    position: relative;
+    bottom: 4.5rem;
+    display: block;
+    display: inline-block;
+    width: 2rem;
+}
+
+.back-icon{
+    transition: all 0.7s;
+    width: 2rem;
+    fill: rgb(238, 255, 254);
+}
+
+.back-icon:hover{
+    width: 2.4rem;
+}
+
+.icon{
+    display: inline-block;
+    background: url("../icon/ball.png") center/cover no-repeat;
+    border-radius: 50%;
+    box-shadow: rgb(0, 4, 27) 0px 0px 20px 0px;
+    margin: 0 0 0 calc(50% - 5.5rem);
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.site-name{
+    margin: 0.5rem 0 1.5rem 0;
+    text-align: center;
+    color: rgb(238, 255, 254);
+}
+
+.none{
+    width: 0;
+    height: 0;
+}
+
+.username, .password{
+    background-color: rgb(238, 255, 254);
+    border-radius: 1.5rem;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    margin-top: 0.5rem;
+	width: 15.6rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
+}
+
+.error1, .error2{
+	transition: all 0.2s;
+	position: relative;
+	left: 0;
+	right: 0;
+	color: rgb(250,70,100);
+	font-size: 0.8rem;
+	margin: 0.5rem 0 0 1rem;
+}
+
+.password-icon, .username-icon{
+    display: block;
+    fill: rgba(63, 63, 63, 0.7);
+    position: relative;
+    top: 0.9rem;
+    left: 0.7rem;
+    width: 1.8rem;
+}
+
+.username-icon{
+	width: 1.5rem;
+}
+
+.input{
+	display: flex;
+}	
+
+.view{
+	visibility: hidden;
+	transition: all 0.3s;
+	width: 2rem;
+	position: relative;
+	top: 0.8rem; 
+	right: 2.5rem;
+	cursor: pointer;
+	fill: rgb(100,100,100);
+}
+
+.view:hover{
+	top: 0.7.5rem; 
+	width: 2.1rem;
+}
+
+.login-button{
+    cursor: pointer;
+	user-select: none; 
+    display: flex;
+	transition: all 0.7s;
+	position: relative;
+    right: 0;
+    width: 15.6rem;
+    align-items: center;
+    justify-content: center;
+	background-color: rgb(255,95,100);
+    height: 2.8rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.login-button:hover{
+    width: 16.4rem;
+    right: 0.4rem;
+}
+
+.links{
+    display: flex;
+    font-size: 0.7rem;
+    color: rgba(233, 251, 255, 0.8);
+    margin-top: 1rem;
+    width: 15.6rem;
+}
+
+.link1, .link2{
+    transition: all 1s;
+    font-size: 0.9rem;
+    display: block;
+    text-decoration: none;
+    color: #138ebd;
+    margin: 0 0 0 0.5rem;
+}
+
+.link1{
+    margin: 0 0.5rem 0 2.5rem;
+}
+
+.link1:hover{
+    margin: 0 0.5rem 0 2.17rem;
+    font-size: 1rem;
+}
+
+.link2:hover{
+    font-size: 1rem;
+}
