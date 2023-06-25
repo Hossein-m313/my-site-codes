@@ -459,14 +459,12 @@ main {
   box-sizing: border-box;
   padding: 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background: url("../picture/skye\ with\ stars.webp") center/cover no-repeat
     fixed;
   border-radius: 2rem;
 }
 #contact-us .line {
-  height: var(--height);
   width: 1px;
   margin: 0 2rem;
   background-color: aliceblue;
@@ -506,6 +504,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 20vw;
 }
 #contact-us .links h4 {
@@ -572,108 +571,3 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes up-text {
-  0% {
-    opacity: 0;
-    top: 1rem;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-@keyframes arrow-down-animation {
-  0% {
-    opacity: 0;
-    top: 1rem;
-  }
-
-  50% {
-    opacity: 1;
-    top: 0;
-  }
-
-  75% {
-    top: 1rem;
-  }
-
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-@keyframes close-text-animation {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes open-text-animation {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-@media (max-width: 1000px) {
-  h2 {
-    font-size: 3rem;
-    text-align: center;
-    padding-top: calc(-5vw + 4rem);
-  }
-  #title-cap {
-    margin-top: 4vw;
-    text-align: center;
-  }
-  #first-page-back-ground div {
-    text-align: center;
-  }
-  #first-page {
-    height: 40rem;
-  }
-  #menu-bar {
-    display: flex;
-  }
-  .option {
-    display: none;
-  }
-}
-@media (max-width: 1500px) {
-  #option1 {
-    left: 5rem;
-    top: 5rem;
-  }
-  #option2 {
-    left: 28rem;
-    top: 25rem;
-  }
-  #option3 {
-    left: 20rem;
-    top: 13rem;
-  }
-  #option4 {
-    left: 40rem;
-    top: 18rem;
-  }
-  #option5 {
-    left: 7rem;
-    top: 23rem;
-  }
-  #option6 {
-    left: 45rem;
-    top: 28rem;
-  }
-  #option7 {
-    left: 60rem;
-    top: 20rem;
-  }
-}
